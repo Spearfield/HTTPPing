@@ -32,9 +32,9 @@ for i in range(args.number):
 	try:
 		startTime = getCurrentMillisec()
 		if args.getdata:
-			r =requests.get(args.url, timeout=args.timeout)
+			r = requests.get(args.url, timeout=args.timeout)
 		else:
-			r =requests.head(args.url, timeout=args.timeout)
+			r = requests.head(args.url, timeout=args.timeout)
 	except requests.exceptions.Timeout:
 		print("Timeout")
 	except requests.exceptions.SSLError as e:
